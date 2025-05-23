@@ -280,3 +280,5 @@ Once you understand this simple version, you can:
 - Your first few questions will cost just a few cents
 
 Happy coding! 🚀
+
+- can you solve the first question of exercise 8.4?
