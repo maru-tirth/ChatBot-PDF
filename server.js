@@ -6,7 +6,7 @@ require("dotenv").config();
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 
-function chunkText(text, maxChunkSize = 20000) {
+function chunkText(text, maxChunkSize = 10000) {
   const chunks = [];
   let start = 0;
   while (start < text.length) {
@@ -36,7 +36,7 @@ rl.question("Enter the path to your PDF file: ", async (pdfPath) => {
 
     console.log(`✅ PDF loaded! Text length: ${fullText.length} characters.`);
 
-    const chunks = chunkText(fullText, 20000);
+    const chunks = chunkText(fullText, 10000);
     console.log(`📄 Total chunks created: ${chunks.length}`);
 
     rl.question("Enter your question about the PDF: ", async (userQuestion) => {
